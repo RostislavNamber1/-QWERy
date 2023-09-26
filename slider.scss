@@ -1,0 +1,51 @@
+
+
+.slider {
+    min-width: 0;
+    .slider-item {
+        width: 100%;  
+        // height: 80vh;   
+        img{
+            width: 100%;
+            object-fit: cover;
+        }     
+    }
+    .slick-list{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .slick-track{
+        display: flex;
+        gap: 2rem;
+        overflow: hidden;
+    }
+    .slick-next{
+        right: 0;
+        &::after{
+            content: url('/img/chevron_big_right.svg');
+            width: 100px;
+            height: 100px;   
+            cursor: pointer;
+            margin-right: 20px;
+        }
+    }
+    .slick-prev{
+        left: 0;
+        &::after{
+            content: url('/img/coolicon.svg');
+            width: 100px;
+            height: 100px;   
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        
+    }
+    .slick-arrow{
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        font-size: 0;
+        border: none;
+        background: none;
+    }
+}
